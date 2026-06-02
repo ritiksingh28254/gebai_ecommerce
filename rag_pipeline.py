@@ -32,11 +32,20 @@ def build_rag_from_folder(folder_path):
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
 
+    vectorstore = Chroma.from_documents(
+    documents=chunks,
+    embedding=embeddings,
+    persist_directory="./chroma_db"
+)
+
+    vectorstore.persist()
     # Store in ChromaDB
-    print("Storing in ChromaDB...")
-    vectorstore = Chroma.from_documents(chunks, embeddings)
+    # print("Storing in ChromaDB...")
+    # vectorstore = Chroma.from_documents(chunks, embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
     print("RAG pipeline ready!")
+
+    
 
     return retriever
 
