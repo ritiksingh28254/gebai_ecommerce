@@ -1,0 +1,55 @@
+I built this project for an E-commerce client who was struggling with high customer support volume. I implemented a RAG-based AI assistant that ingests all their product manuals, return policies, FAQs and warranty documents into ChromaDB as vector embeddings. When a customer asks a question, the system retrieves the top 3 most relevant chunks and passes them to GPT-2 to generate an accurate answer. This reduced their support response time from 30 minutes to 3 seconds.
+
+
+
+
+- Developed an AI-powered document assistant using RAG 
+  architecture that reduced customer support response 
+  time from 30 minutes to 3 seconds
+
+- Implemented document ingestion pipeline that 
+  automatically loads and processes multiple PDF 
+  documents including product manuals, FAQs, return 
+  policies and warranty documents
+
+- Built vector embedding pipeline using HuggingFace 
+  sentence-transformers (all-MiniLM-L6-v2) and stored 
+  embeddings in ChromaDB vector database for 
+  efficient similarity search
+
+- Integrated GPT-2 language model for generating 
+  accurate context-aware answers based on retrieved 
+  document chunks
+
+- Developed interactive chat interface using Streamlit 
+  with chat history, source references and 
+  real-time responses
+
+- Implemented caching mechanism using Streamlit's 
+  cache_resource to optimize model loading 
+  and improve performance
+
+
+
+  AI-Powered E-commerce Product Assistant
+Technologies: Python, LangChain, ChromaDB, HuggingFace, 
+              Streamlit, GPT-2
+Domain: Generative AI | RAG | NLP
+
+- Developed AI chatbot for E-commerce client using RAG 
+  architecture reducing support response time by 95%
+
+- Built automated PDF ingestion pipeline processing 
+  multiple documents including FAQs, return policies 
+  and product manuals simultaneously
+
+- Implemented vector similarity search using ChromaDB 
+  and HuggingFace embeddings (all-MiniLM-L6-v2) for 
+  accurate document retrieval
+
+- Integrated GPT-2 LLM for generating context-aware 
+  answers grounded in company documents preventing 
+  hallucination
+
+- Deployed interactive chat UI using Streamlit with 
+  real-time responses and source citation features
